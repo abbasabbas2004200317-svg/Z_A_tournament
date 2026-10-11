@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Z Tournament | بطولات الألعاب</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2d;--panel2:#18233a;--line:#293651;--text:#f4f7ff;--muted:#9eabc5;--accent:#9cff57;--accent2:#6eebc2;--danger:#ff7373}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 0%,#1a2b48 0,transparent 32%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
+button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:10px;padding:10px 14px;font-weight:700}
+.wrap{max-width:1120px;margin:auto;padding:20px}.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 0 24px}.brand{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:900}.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--accent);color:#101827;font-weight:1000;font-size:19px}.nav small{color:var(--muted)}.btn-main{background:var(--accent);color:#111827}.btn-secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}.hero{padding:28px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(120deg,#172640,#10182b 70%);display:grid;grid-template-columns:1.5fr 1fr;gap:20px;align-items:center}.eyebrow{color:var(--accent);font-weight:bold;font-size:13px}.hero h1{font-size:clamp(28px,4vw,46px);line-height:1.25;margin:8px 0 14px}.hero p{color:var(--muted);max-width:620px}.hero-art{display:grid;place-items:center;min-height:180px;border-radius:18px;background:linear-gradient(135deg,#263b5e,#17213a);font-size:64px;position:relative;overflow:hidden}.hero-art:after{content:"Z";position:absolute;font-size:88px;font-weight:1000;color:#ffffff0b;transform:rotate(-12deg)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 28px}.stat,.panel,.tournament{background:var(--panel);border:1px solid var(--line);border-radius:16px}.stat{padding:16px}.stat strong{display:block;font-size:24px}.stat span{color:var(--muted);font-size:13px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:26px 0 14px}.section-head h2{margin:0;font-size:22px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{background:transparent;color:var(--muted);border:1px solid var(--line);padding:7px 12px}.filter.active{background:var(--accent);color:#111827;border-color:var(--accent)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tournament{padding:18px;display:flex;flex-direction:column;gap:12px}.t-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.tag{font-size:12px;border-radius:7px;padding:4px 8px;background:#26364f;color:#d6e2f9}.tag.live{background:#234a3b;color:#a9ffd2}.tournament h3{margin:0;font-size:19px}.muted{color:var(--muted);font-size:13px}.t-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px}.t-meta div{padding:9px;background:#0e1526;border-radius:9px;font-size:13px}.t-meta b{display:block}.t-actions{display:flex;gap:8px;margin-top:auto}.t-actions button{flex:1}.progress{height:6px;background:#28334a;border-radius:8px;overflow:hidden}.progress span{display:block;height:100%;background:var(--accent);width:55%}.empty{color:var(--muted);padding:30px;text-align:center}.modal-back{position:fixed;inset:0;background:#030712cc;display:none;align-items:center;justify-content:center;padding:16px;z-index:10}.modal-back.open{display:flex}.modal{width:min(540px,100%);max-height:90vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px}.modal h2{margin-top:0}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:13px;color:var(--muted)}.field input,.field select{width:100%;padding:11px;background:#0c1424;border:1px solid var(--line);border-radius:9px;color:var(--text)}.modal-actions{display:flex;gap:10px;margin-top:18px}.modal-actions button{flex:1}.toast{position:fixed;bottom:20px;left:20px;right:20px;margin:auto;max-width:420px;background:#193c31;border:1px solid #326b54;color:#d7ffeb;padding:13px 16px;border-radius:12px;display:none;z-index:20}.bracket{display:flex;gap:12px;overflow:auto;padding:4px 2px 14px}.round{min-width:220px;flex:1}.round h3{font-size:14px;color:var(--muted)}.match{padding:12px;margin-bottom:12px;background:#0d1526;border:1px solid var(--line);border-radius:12px}.team{display:flex;justify-content:space-between;gap:8px;padding:7px 0}.team+.team{border-top:1px solid #26334a}.winner{color:var(--accent);font-weight:bold}.round button{width:100%;margin-top:8px;font-size:12px;padding:7px}.footer{margin-top:35px;padding:20px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px;text-align:center}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-art{min-height:120px}.cards{grid-template-columns:1fr 1fr}}@media(max-width:560px){.wrap{padding:14px}.cards{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:20px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero{padding:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <div class="brand"><div class="logo">Z</div><div>Z TOURNAMENT<br><small>منصتك للبطولات الإلكترونية</small></div></div>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><small>نسخة تجريبية محلية</small><button class="btn-main" onclick="openCreate()">＋ إنشاء بطولة</button></div>
+  </header>
+  <section class="hero">
+    <div><div class="eyebrow">PLAY • COMPETE • WIN</div><h1>خلّ المنافسة تبدأ.<br>نظّم بطولتك بطريقتك.</h1><p>منصة تجريبية لتنظيم بطولات الكمبيوتر والبلايستيشن، تسجيل الفرق، ومتابعة المواجهات بنظام خروج المغلوب.</p><button class="btn-main" onclick="document.getElementById('tournaments').scrollIntoView({behavior:'smooth'})">تصفح البطولات ←</button></div>
+    <div class="hero-art" aria-label="رمز ألعاب">🎮</div>
+  </section>
+  <section class="stats">
+    <div class="stat"><strong id="statT">3</strong><span>بطولات معروضة</span></div>
+    <div class="stat"><strong id="statTeams">18</strong><span>فرق مسجلة تجريبياً</span></div>
+    <div class="stat"><strong>خروج مغلوب</strong><span>نظام المنافسة الحالي</span></div>
+  </section>
+  <section id="tournaments">
+    <div class="section-head"><h2>البطولات</h2><div class="filters"><button class="filter active" data-filter="الكل" onclick="setFilter('الكل',this)">الكل</button><button class="filter" data-filter="PC" onclick="setFilter('PC',this)">PC</button><button class="filter" data-filter="PlayStation" onclick="setFilter('PlayStation',this)">PlayStation</button></div></div>
+    <div class="cards" id="cards"></div>
+  </section>
+  <section class="panel" style="padding:18px;margin-top:24px">
+    <div class="section-head" style="margin-top:0"><h2>مثال على جدول خروج المغلوب</h2><span class="tag">عرض توضيحي</span></div>
+    <p class="muted">هذا مثال لبطولة من 8 فرق. اختَر فائزاً لتشوف شلون يتأهل للدور التالي داخل النموذج التجريبي.</p>
+    <div class="bracket" id="bracket"></div>
+  </section>
+  <footer class="footer">Z Tournament — نموذج أولي للتجربة. البيانات محفوظة بهذا المتصفح فقط، وليست منشورة للناس بعد.</footer>
+</div>
+<div class="modal-back" id="modal" role="dialog" aria-modal="true">
+  <div class="modal"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h2 id="modalTitle">إنشاء بطولة</h2><button class="btn-secondary" onclick="closeModal()">✕</button></div>
+    <form id="tourForm"><div class="form-grid">
+      <div class="field full"><label for="name">اسم البطولة</label><input id="name" required maxlength="70" placeholder="مثلاً: بطولة FC 26"></div>
+      <div class="field"><label for="platform">الجهاز</label><select id="platform"><option>PC</option><option>PlayStation</option></select></div>
+      <div class="field"><label for="game">اللعبة</label><input id="game" required placeholder="FC 26 / Tekken..."></div>
+      <div class="field"><label for="teams">عدد الفرق</label><select id="teams"><option>4</option><option selected>8</option><option>16</option><option>32</option></select></div>
+      <div class="field"><label for="date">موعد البطولة</label><input id="date" type="date"></div>
+      <div class="field"><label for="fee">رسوم الاشتراك (د.ع)</label><input id="fee" type="number" min="0" value="0"></div>
+      <div class="field"><label for="prize">الجائزة (د.ع)</label><input id="prize" type="number" min="0" value="0"></div>
+    </div><div class="modal-actions"><button type="submit" class="btn-main">حفظ البطولة</button><button type="button" class="btn-secondary" onclick="closeModal()">إلغاء</button></div></form>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const seed=[
+{id:1,name:'بطولة FC 26',game:'EA Sports FC',platform:'PlayStation',teams:8,registered:6,date:'2026-10-25',fee:5000,prize:100000,status:'التسجيل مفتوح'},
+{id:2,name:'Valorant Clash',game:'Valorant',platform:'PC',teams:16,registered:11,date:'2026-10-30',fee:10000,prize:250000,status:'التسجيل مفتوح'},
+{id:3,name:'Tekken Night',game:'Tekken 8',platform:'PlayStation',teams:8,registered:8,date:'2026-10-18',fee:0,prize:50000,status:'اكتمل التسجيل'}
+];
+let tournaments=loadTours(),filter='الكل';
+function loadTours(){try{return JSON.parse(localStorage.getItem('ggTours'))||seed}catch(e){return seed}}
+function saveTours(){localStorage.setItem('ggTours',JSON.stringify(tournaments))}
+function money(n){return Number(n||0).toLocaleString('en-US')+' د.ع'}
+function render(){let list=tournaments.filter(t=>filter==='الكل'||t.platform===filter);document.getElementById('cards').innerHTML=list.length?list.map(t=>`<article class="tournament"><div class="t-top"><span class="tag">${esc(t.platform)}</span><span class="tag ${t.status==='التسجيل مفتوح'?'live':''}">${esc(t.status)}</span></div><h3>${esc(t.name)}</h3><div class="muted">${esc(t.game)} • ${t.date||'الموعد يحدد لاحقاً'}</div><div class="t-meta"><div><span class="muted">الفرق</span><b>${t.registered}/${t.teams}</b></div><div><span class="muted">الاشتراك</span><b>${money(t.fee)}</b></div><div><span class="muted">الجائزة</span><b>${money(t.prize)}</b></div><div><span class="muted">النظام</span><b>خروج مغلوب</b></div></div><div class="progress"><span style="width:${Math.min(100,t.registered/t.teams*100)}%"></span></div><div class="t-actions"><button class="btn-main" onclick="registerTeam(${t.id})" ${t.registered>=t.teams?'disabled':''}>${t.registered>=t.teams?'اكتمل العدد':'سجّل فريقك'}</button><button class="btn-secondary" onclick="details(${t.id})">التفاصيل</button></div></article>`).join(''):'<div class="empty">ماكو بطولات بهذا التصنيف حالياً.</div>';document.getElementById('statT').textContent=tournaments.length;document.getElementById('statTeams').textContent=tournaments.reduce((s,t)=>s+t.registered,0)}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function setFilter(f,b){filter=f;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));render()}
+function openCreate(){document.getElementById('tourForm').reset();document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+document.getElementById('tourForm').addEventListener('submit',e=>{e.preventDefault();let t={id:Date.now(),name:document.getElementById('name').value.trim(),platform:document.getElementById('platform').value,game:document.getElementById('game').value.trim(),teams:Number(document.getElementById('teams').value),registered:0,date:document.getElementById('date').value,fee:Number(document.getElementById('fee').value||0),prize:Number(document.getElementById('prize').value||0),status:'التسجيل مفتوح'};tournaments.unshift(t);saveTours();render();closeModal();notify('انضافت البطولة بهذا المتصفح.');});
+function registerTeam(id){let t=tournaments.find(x=>x.id===id);if(!t||t.registered>=t.teams)return;let name=prompt('اكتب اسم الفريق للتسجيل التجريبي:');if(!name||!name.trim())return;t.registered++;if(t.registered>=t.teams)t.status='اكتمل التسجيل';saveTours();render();notify('تم تسجيل '+name.trim()+' تجريبياً.')}
+function details(id){let t=tournaments.find(x=>x.id===id);alert(`${t.name}\nاللعبة: ${t.game}\nالجهاز: ${t.platform}\nالمقاعد: ${t.registered}/${t.teams}\nالنظام: خروج مغلوب\nالاشتراك: ${money(t.fee)}\nالجائزة: ${money(t.prize)}\n\nملاحظة: هذه نسخة محلية تجريبية، التسجيل ليس متصلاً بقاعدة بيانات عامة.`)}
+function notify(s){let el=document.getElementById('toast');el.textContent=s;el.style.display='block';setTimeout(()=>el.style.display='none',2600)}
+let rounds=[
+[{a:'Alpha',b:'Falcons',winner:null},{a:'Storm',b:'Vikings',winner:null},{a:'Pixel',b:'Wolves',winner:null},{a:'Ninjas',b:'Titans',winner:null}],
+[{a:'الفائز 1',b:'الفائز 2',winner:null},{a:'الفائز 3',b:'الفائز 4',winner:null}],
+[{a:'المتأهل 1',b:'المتأهل 2',winner:null}]
+];
+function renderBracket(){let labels=['ربع النهائي','نصف النهائي','النهائي'];document.getElementById('bracket').innerHTML=rounds.map((r,ri)=>`<div class="round"><h3>${labels[ri]}</h3>${r.map((m,mi)=>`<div class="match"><div class="team ${m.winner===m.a?'winner':''}"><span>${esc(m.a)}</span><span>${m.winner===m.a?'✓':''}</span></div><div class="team ${m.winner===m.b?'winner':''}"><span>${esc(m.b)}</span><span>${m.winner===m.b?'✓':''}</span></div><button class="btn-secondary" onclick="pickWinner(${ri},${mi},0)">فوز ${esc(m.a)}</button><button class="btn-secondary" onclick="pickWinner(${ri},${mi},1)">فوز ${esc(m.b)}</button></div>`).join('')}</div>`).join('')}
+function pickWinner(ri,mi,which){let m=rounds[ri][mi];m.winner=which?m.b:m.a;if(ri<2){let next=rounds[ri+1][Math.floor(mi/2)];if(mi%2===0)next.a='الفائز: '+m.winner;else next.b='الفائز: '+m.winner;}renderBracket();notify('تم تحديث نتيجة المباراة في المثال.')}
+render();renderBracket();
+</script>
+</body>
+</html>
